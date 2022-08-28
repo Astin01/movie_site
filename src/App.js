@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="movie/:id" element={<Detail />} />
       </Routes>
-      {/* switch를 넣어서 라우터를 선택적으로 표시 */}
+      {/* :id 변수 전달 */}
     </Router>
   );
 }

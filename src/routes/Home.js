@@ -42,3 +42,10 @@ function Home() {
 }
 
 export default Home;
+
+// npm i gh-pages 깃허브 업로드 패키지
+// build 스크립트 실행->웹사이트의 production ready(코드압축 및 최적화 완료) code생성->npm run build
+// package.json에 가서 ,찍고 "homepage":"http://github username.github.io/repository."
+// script에서 deploy(설치한 gh-pages 실행): "gh-pages -d build" (directory약자) (build 폴더를 homepage에 업로드)
+// predeploy:"npm run build" deploy실행되면 먼저 실행, build->deploy 과정 자동화
+// npm run deploy

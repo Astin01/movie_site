@@ -35,7 +35,7 @@ function App() {
     </div>
   );
 }
-// state를 변경할떄 모든 code들이 다시 실행
+// state를 변경할때 모든 code들이 다시 실행
 export default App;
 
 // nodejs 덕분에 파일분리 가능,한파일 당 한개의 컴포넌트 가능

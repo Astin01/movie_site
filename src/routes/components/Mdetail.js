@@ -1,24 +1,34 @@
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-// prop(id,coverImg은 객체
-function Movie({ id, coverImg, title, summary, genres }) {
+function Movie({
+  id,
+  coverImg,
+  title,
+  summary,
+  genres,
+  des_int,
+  des_ful,
+  rating,
+  runtime,
+  year,
+}) {
   return (
     <div>
       <img src={coverImg} alt={title}></img>
-      {/* 경고이유 img 요소는 alt속성을 가져야한다 */}
+
       <h2>
         <Link to={`./movie/${id}`}>{title}</Link>
       </h2>
-      {/* link 를 사용하면 reload 방지 */}
 
-      <p>{`Summary     ${summary}`}</p>
-      <p>Genres</p>
+      <p>{`${summary}`}</p>
       <ul>{genres && genres.map((g) => <li key={g}>{g}</li>)}</ul>
+      <p>{des_int}</p>
+      <p>{des_ful}</p>
+      <P>rating </P>
     </div>
   );
 }
-// movie 컴포가 prop요소들({}안)을 부모컴포로부터 받아온다
 
 Movie.propTypes = {
   id: propTypes.number.isRequired,
@@ -29,5 +39,3 @@ Movie.propTypes = {
 };
 
 export default Movie;
-
-// react router 페이지 전환, router 별로 생각 필요

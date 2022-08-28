@@ -12,5 +12,5 @@ Button.propTypes = {
 };
 
 export default Button;
-// style.css 생성 후  index.js에 import하여 사용 ,style prop 사용 <buton bg:"toma"></buton>
+// style.css 생성 후  index.js에 import하여 사용 ,style prop 사용 <buton bg:"toma"></buton>or
 // css module사용하여 css파일 활용과 개별적용을 충족

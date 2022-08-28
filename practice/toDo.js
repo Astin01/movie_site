@@ -15,7 +15,7 @@ function App() {
     setToDo("");
     // 2가지 방법 ,값보내기,함수보내기
 
-    // map array의 item을 원하는 것으로 바꾸는 역할, item수만큼 실행,argu로 현재item
+    // map: array의 item을 원하는 것으로 바꾸는 역할, item수만큼 실행,argu로 현재item
   };
   console.log(toDos);
   return (
@@ -38,7 +38,7 @@ function App() {
       </ul>
       {/* hr 주제구분,선 */}
       {/* 같은 컴포list를 렌더때 key라는prop필요,react가 기본적list있는 모든item인식때문 */}
-      {/* string으로 된 todo가 map통해react element(일반객체)로 이루어진 배열이 됨 */}
+      {/* string으로 된 todo가 map통해 react element(일반객체)로 이루어진 배열이 됨 */}
     </div>
   );
 }
