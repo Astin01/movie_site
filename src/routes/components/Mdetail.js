@@ -1,7 +1,6 @@
 import propTypes from "prop-types";
-import { Link } from "react-router-dom";
 
-function Movie({
+function Mdetail({
   id,
   coverImg,
   title,
@@ -16,16 +15,13 @@ function Movie({
   return (
     <div>
       <img src={coverImg} alt={title}></img>
-
-      <h2>
-        <Link to={`./movie/${id}`}>{title}</Link>
-      </h2>
-
       <p>{`${summary}`}</p>
       <ul>{genres && genres.map((g) => <li key={g}>{g}</li>)}</ul>
       <p>{des_int}</p>
       <p>{des_ful}</p>
-      <P>rating </P>
+      <p>{rating}</p>
+      <p>{runtime}</p>
+      <p>{year}</p>
     </div>
   );
 }
@@ -38,4 +34,4 @@ Movie.propTypes = {
   genres: propTypes.arrayOf(propTypes.string),
 };
 
-export default Movie;
+export default Mdetail;

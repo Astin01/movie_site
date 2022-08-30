@@ -7,8 +7,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="movie/:id" element={<Detail />} />
+        <Route path="/movie_site.git" element={<Home />} />
+        <Route path="movie_site.git/movie/:id" element={<Detail />} />
       </Routes>
       {/* :id 변수 전달 */}
     </Router>
