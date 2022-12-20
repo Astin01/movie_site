@@ -13,6 +13,7 @@ function Home() {
     ).json();
     setMovies(json.data.movies);
     setLoading(false);
+    console.log(json.data.movies);
   };
   // fetch 원격 api 호출, async 반드시 promise반환,await 프라미스가 처리때까지 대기
   // promise 비동기 작업으로 전달되는 값의 컨테이너, body.json 프라미스 반환

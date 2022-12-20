@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 function Detail() {
   const [loading, setLoading] = useState(true);
-  const [detail, setDetail] = useState([]);
+  const [detail, setDetail] = useState({});
   const { id } = useParams();
   const getDetail = async () => {
     const json = await (
@@ -10,7 +10,7 @@ function Detail() {
     ).json();
     setDetail(json.data.movie);
     setLoading(false);
-    console.log(detail);
+    console.log(detail.id);
   };
   useEffect(() => {
     getDetail();
@@ -23,7 +23,7 @@ function Detail() {
         <div>
           {detail((Mdetail) => (
             <Mdetail
-              key={Mdetail.setLoading}
+              key={Mdetail.download_count}
               id={Mdetail.id}
               coverImg={Mdetail.medium_cover_image}
               title={Mdetail.title}
@@ -45,3 +45,46 @@ function Detail() {
 export default Detail;
 
 // breaking change 버전업데이트 때문에 코드가 깨지는 현상(새로 코드를 짜야함)
+
+// import { useState, useEffect } from "react";
+// import { useParams } from "react-router-dom";
+// function Detail() {
+//   const [loading, setLoading] = useState(true);
+//   const [detail, setDetail] = useState([]);
+//   const { id } = useParams();
+//   const getDetail = async () => {
+//     const json = await (
+//       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+//     ).json();
+//     setDetail(json.data.movie);
+//     setLoading(false);
+//   };
+//   useEffect(() => {
+//     getDetail();
+//   }, []);
+//   return (
+//     <div>
+//       {loading ? (
+//         <h1>Loading</h1>
+//       ) : (
+//         <div>
+//           {detail.map((Mdetail) => (
+//             <Mdetail
+//               key={Mdetail.download_count}
+//               id={Mdetail.id}
+//               coverImg={Mdetail.medium_cover_image}
+//               title={Mdetail.title}
+//               summary={Mdetail.summary}
+//               genres={Mdetail.genres}
+//               des_int={Mdetail.description_intro}
+//               des_ful={Mdetail.description_full}
+//               rating={Mdetail.rating}
+//               runtime={Mdetail.runtime}
+//               year={Mdetail.year}
+//             />
+//           ))}
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
